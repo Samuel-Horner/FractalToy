@@ -1,0 +1,64 @@
+body {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:0px;
+    margin:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    flex-direction: column;
+}
+
+#glscreen {
+    border:0.1rem;
+    border-style:solid;
+    width:40vw;
+}
+
+@media screen and (max-width:600px) {
+    #glscreen {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #glscreen {
+        width: 80vw;
+    }
+}
+
+#playerInputs {
+    text-align: center;
+}
+
+.label {
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0;
+    padding:0;
+    font-family: Arial;
+}
+
+.label-block {
+    font-size: 1rem;
+    display: block;
+    margin: 0;
+    padding:0;
+    font-family: Arial;
+}
+
+#color-array{
+    border: 0.1rem;
+    border-style: solid;
+    padding: 0;
+}
+
+.color-input {
+    display: inline-block;
+    border: 0;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(0,0,0,0);
+}

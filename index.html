@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>NEA Project</title>
+</head>
+<body>
+    <script src="render.js"></script>
+    <script id="2d-vertex-shader" type="x-shader/x-vertex">
+    attribute vec2 a_position;
+    void main() {
+        gl_Position = vec4(a_position, 0, 1);
+    }
+    </script>
+    <canvas id="glscreen"></canvas>
+    <div id="playerInputs">
+        <div>
+            <p class="label">Resolution</p>
+            <input type="range" min="50" max="200" value="50" id="resolution-slider" oninput="resolutionChange()">
+            <p class="label" id="resolution-display">500</p>
+        </div>
+        <button onclick="toggleRender()" style="margin:0.1rem">Switch fractal</button>
+        <p id="fps-display" class="label-block">FPS: </p>            
+        <p class="label-block">Colour Gradient</p>
+        <div id="color-array">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+            <input type="color" value="#00ff00" class="color-input">
+        </div>
+        <button onclick="applyGradient()">Apply Gradient</button>
+    </div>
+</body>
+</html>
